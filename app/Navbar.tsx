@@ -24,10 +24,16 @@ const Navbar = () => {
   const { data, status } = useSession();
 
   return (
-    <nav className="py-4 border-b mb-5">
+    <nav className="py-4 border-b mb-5 px-4 xl:px-0">
       <Container>
         <Flex align="center" justify="between" gap="4">
-          <Link href="/">Blog</Link>
+          <Link
+            className="font-bold"
+            style={{ color: "var(--accent-10)" }}
+            href="/"
+          >
+            Blog
+          </Link>
           <ul className="flex items-center gap-4">
             {navItems.map((item) => (
               <li key={item.label}>
@@ -49,10 +55,8 @@ const Navbar = () => {
                 />
               </DropdownMenu.Trigger>
               <DropdownMenu.Content>
-                <DropdownMenu.Item shortcut="⌘ E">
-                  {data?.user?.email}
-                </DropdownMenu.Item>
-                <DropdownMenu.Item shortcut="⌘ D">
+                <DropdownMenu.Label>{data?.user?.email}</DropdownMenu.Label>
+                <DropdownMenu.Item>
                   <Link href="/api/auth/signout">Signout</Link>
                 </DropdownMenu.Item>
               </DropdownMenu.Content>

@@ -1,10 +1,12 @@
-import { Button } from "@radix-ui/themes";
-import React from "react";
+import { Box, Grid } from "@radix-ui/themes";
 
 const Home = () => {
   return (
     <main>
-      <Button>Hello</Button>
+      <Grid columns={{ initial: "1", md: "6" }} gap="4">
+        <Box className="col-span-12 lg:col-span-4">main</Box>
+        <Box className="col-span-12 lg:col-span-2">sidebar</Box>
+      </Grid>
     </main>
   );
 };
