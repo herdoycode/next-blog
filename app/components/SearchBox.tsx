@@ -1,11 +1,10 @@
 "use client";
-import { Box, TextField } from "@radix-ui/themes";
 import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
-import React from "react";
+import { Box, TextField } from "@radix-ui/themes";
 
 const SearchBox = () => {
   return (
-    <Box p="4" width="100%" className="bg-zinc-100">
+    <Box px="5" py="6" width="100%" className="bg-[--gray-3]">
       <TextField.Root>
         <TextField.Slot>
           <MagnifyingGlassIcon height="16" width="16" />

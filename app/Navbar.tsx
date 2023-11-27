@@ -15,23 +15,19 @@ const Navbar = () => {
   ];
 
   const linkClassNames = (link: string) => {
-    let classNames = "hover:text-zinc-900 transition-colors ";
+    let classNames = "hover:text-[--gray-12] transition-colors ";
     return currentPath === link
-      ? (classNames += "text-zinc-900")
-      : (classNames += "text-zinc-500");
+      ? (classNames += "text-[--gray-12]")
+      : (classNames += "text-[--gray-11]");
   };
 
   const { data, status } = useSession();
 
   return (
-    <nav className="py-4 border-b mb-5 px-4 xl:px-0">
+    <nav className="py-4 border-b border-[--gray-4] mb-5 px-4 xl:px-0">
       <Container>
         <Flex align="center" justify="between" gap="4">
-          <Link
-            className="font-bold"
-            style={{ color: "var(--accent-10)" }}
-            href="/"
-          >
+          <Link className="font-bold text-[--accent-9]" href="/">
             Blog
           </Link>
           <ul className="flex items-center gap-4">
