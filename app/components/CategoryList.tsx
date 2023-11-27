@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Text } from "@radix-ui/themes";
+import { Badge, Box, Flex, Heading, Text } from "@radix-ui/themes";
 
 const CategoryList = () => {
   const categorys = [
@@ -14,12 +14,13 @@ const CategoryList = () => {
       <Flex direction="column" gap="4">
         {categorys.map((c, i) => (
           <Flex
-            className="bg-[--gray-2] hover:bg-[--accent-9] hover:cursor-pointer hover:text-[--gray-1] transition-colors"
+            key={i}
+            className="bg-[--gray-2] hover:bg-[--accent-7] hover:cursor-pointer hover:text-[--gray-1] transition-colors"
             p="3"
             justify="between"
           >
             <Text> {c.label} </Text>
-            <span> {c.count} </span>
+            <Badge variant="soft"> {c.count} </Badge>
           </Flex>
         ))}
       </Flex>
