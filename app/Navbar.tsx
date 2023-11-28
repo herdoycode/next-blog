@@ -45,7 +45,7 @@ const Navbar = () => {
                   size="2"
                   radius="full"
                   src={data?.user?.image!}
-                  fallback="user image"
+                  fallback="H"
                   crossOrigin="anonymous"
                 />
               </DropdownMenu.Trigger>

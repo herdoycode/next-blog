@@ -2,6 +2,7 @@ import { Box, Grid } from "@radix-ui/themes";
 import { Metadata } from "next";
 import PostCard from "./components/PostCard";
 import SideBar from "./components/SideBar";
+import Pagination from "./components/Pagination";
 
 export const metadata: Metadata = {
   title: "Next js blog app",
@@ -19,6 +20,7 @@ const Home = () => {
             <PostCard />
             <PostCard />
           </Grid>
+          <Pagination pageSize={5} currentPage={1} itemsCount={50} />
         </Box>
         <Box className="col-span-12 lg:col-span-2">
           <SideBar />

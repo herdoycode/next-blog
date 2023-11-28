@@ -13,6 +13,7 @@ import {
   Text,
 } from "@radix-ui/themes";
 import Image from "next/image";
+import Link from "next/link";
 
 const PostCard = () => {
   return (
@@ -35,13 +36,10 @@ const PostCard = () => {
             <ChatBubbleIcon /> <Text size="2">18</Text>
           </Flex>
         </Flex>
-        <Heading
-          mb="3"
-          as="h3"
-          size="4"
-          className="cursor-pointer hover:text-[--accent-9] transition-colors"
-        >
-          Typography is the art and technique
+        <Heading mb="3" as="h3" size="4">
+          <Link href="/1" className="hover:text-[--accent-9] transition-colors">
+            Typography is the art and technique
+          </Link>
         </Heading>
         <Text as="p" mb="4">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi

@@ -1,4 +1,4 @@
-import { Avatar, Box, Card, Flex, Text } from "@radix-ui/themes";
+import { Avatar, Box, Flex, Text } from "@radix-ui/themes";
 const Comment = () => {
   return (
     <Flex gap="3">
