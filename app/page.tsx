@@ -1,9 +1,7 @@
-import { Box, Flex, Grid } from "@radix-ui/themes";
+import { Box, Grid } from "@radix-ui/themes";
 import { Metadata } from "next";
-import CategoryList from "./components/CategoryList";
-import Newsletter from "./components/Newsletter";
 import PostCard from "./components/PostCard";
-import SearchBox from "./components/SearchBox";
+import SideBar from "./components/SideBar";
 
 export const metadata: Metadata = {
   title: "Next js blog app",
@@ -23,11 +21,7 @@ const Home = () => {
           </Grid>
         </Box>
         <Box className="col-span-12 lg:col-span-2">
-          <Flex width="100%" direction="column" gap="6">
-            <SearchBox />
-            <CategoryList />
-            <Newsletter />
-          </Flex>
+          <SideBar />
         </Box>
       </Grid>
     </main>
